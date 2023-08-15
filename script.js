@@ -103,3 +103,15 @@ function ExcluirVaga() {
     alert("Vaga excluída");
   }
 }
+function ExibirMenu() {
+  const opçao =
+    "Cadastro de vaga de empregos" +
+    "\n\nEscolha uma das opções abaixo" +
+    "\n1. Listar vagas disponíveis" +
+    "\n2. Criar uma nova vaga" +
+    "\n3. Visualizar uma vaga" +
+    "\n4. Inscrever um(a) candidato(a)" +
+    "\n5. Excluir uma vaga" +
+    "\n6. Sair";
+  return opçao;
+}
