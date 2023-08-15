@@ -34,3 +34,29 @@ function NovaVaga() {
     alert("Vaga criada");
   }
 }
+function ExibirVagas() {
+  const indice = prompt("Informe o índice da vaga que deseja exibir");
+  const vaga = vagas[indice];
+
+  const CandidatosEmTexto = vaga.candidatos.reduce(function (
+    textofinal,
+    candidato
+  ) {
+    return textofinal + "\n - " + candidato;
+  },
+  "");
+  alert(
+    "Vaga nº " +
+      indice +
+      "\nNome: " +
+      vaga.nome +
+      "\nDescrição: " +
+      vaga.Descriçao +
+      "\nData limite: " +
+      vaga.DataLimite +
+      "\nQuantidade de canditados: " +
+      vaga.candidatos.length +
+      "\nCandidatos inscritos: " +
+      vagas.CandidatosEmTexto
+  );
+}
