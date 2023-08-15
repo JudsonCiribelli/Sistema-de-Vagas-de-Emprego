@@ -60,3 +60,27 @@ function ExibirVagas() {
       vagas.CandidatosEmTexto
   );
 }
+function InscreverCandidato() {
+  const candidato = prompt("Informe o nome do candidato(a): ");
+  const indice = prompt(
+    "Informe o indice da vaga para qual o candidato deseja se inscrever: "
+  );
+  const vagas = vagas[indice];
+  const confirmaçao = confirm(
+    "Deseja inscrever o candidato " +
+      candidato +
+      "na vaga " +
+      indice +
+      " \n?" +
+      "Nome: " +
+      vaga.nome +
+      "\nDescrição: " +
+      vaga.Descriçao +
+      "\nData limite: " +
+      vaga.DataLimite
+  );
+  if (confirmaçao) {
+    vaga.candidatos.push(candidato);
+    alert("Inscrição realizada");
+  }
+}
