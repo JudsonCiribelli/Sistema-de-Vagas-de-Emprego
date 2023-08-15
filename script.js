@@ -104,38 +104,38 @@ function ExcluirVaga() {
   }
 }
 function ExibirMenu() {
-  const opçao =
+  const opcao = prompt(
     "Cadastro de vaga de empregos" +
-    "\n\nEscolha uma das opções abaixo" +
-    "\n1. Listar vagas disponíveis" +
-    "\n2. Criar uma nova vaga" +
-    "\n3. Visualizar uma vaga" +
-    "\n4. Inscrever um(a) candidato(a)" +
-    "\n5. Excluir uma vaga" +
-    "\n6. Sair";
-  return opçao;
+      "\n\nEscolha uma das opções abaixo" +
+      "\n1. Listar vagas disponíveis" +
+      "\n2. Criar uma nova vaga" +
+      "\n3. Visualizar uma vaga" +
+      "\n4. Inscrever um(a) candidato(a)" +
+      "\n5. Excluir uma vaga" +
+      "\n6. Sair"
+  );
+  return opcao;
 }
 function executar() {
   let opcao = "";
 
   do {
-    opcao = exibirMenu();
-
+    opcao = ExibirMenu();
     switch (opcao) {
       case "1":
         listarVagas();
         break;
       case "2":
-        novaVaga();
+        NovaVaga();
         break;
       case "3":
-        exibirVaga();
+        ExibirVagas();
         break;
       case "4":
-        inscreverCandidato();
+        InscreverCandidato();
         break;
       case "5":
-        excluirVaga();
+        ExcluirVaga();
       case "6":
         alert("Saindo...");
         break;
