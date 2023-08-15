@@ -84,3 +84,22 @@ function InscreverCandidato() {
     alert("Inscrição realizada");
   }
 }
+function ExcluirVaga() {
+  const indice = prompt("Informe o índice da vaga que deseja excluir");
+  const vagas = vagas[indice];
+  const confirmaçao = confirm(
+    "Deseja exluir a vaga " +
+      indice +
+      "?\n" +
+      "Nome: " +
+      vaga.nome +
+      "\nDescrição: " +
+      vaga.Descriçao +
+      "\nData limite: " +
+      vaga.DataLimite
+  );
+  if (confirmaçao) {
+    vagas.splice(indice, 1);
+    alert("Vaga excluída");
+  }
+}
